@@ -514,53 +514,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          GoRouter.of(context)
-                                              .prepareAuthEvent();
-                                          final user = await authManager
-                                              .signInWithFacebook(context);
-                                          if (user == null) {
-                                            return;
-                                          }
-
-                                          context.goNamedAuth(
-                                              'HomePage', context.mounted);
-                                        },
-                                        text: 'Login with Facebook',
-                                        icon: Icon(
-                                          Icons.add,
-                                          color: Colors.transparent,
-                                          size: 20.0,
-                                        ),
-                                        options: FFButtonOptions(
-                                          width: 200.0,
-                                          height: 44.0,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 8.0, 0.0),
-                                          color: Colors.white,
-                                          textStyle: GoogleFonts.getFont(
-                                            'Roboto',
-                                            color: Color(0xFF1877F2),
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 14.0,
-                                          ),
-                                          elevation: 4.0,
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 0.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
                                       alignment:
                                           AlignmentDirectional(-0.83, 0.0),
                                       child: Container(
